@@ -1,15 +1,18 @@
+const express = require('express');
 const { readAndAppend, readFromFile } = require('../develop/helpers/fsUtils');
-const router = require('express').Router();
+const router = express.Router();
 const path = require('path');
 
 
 
 
 
+
 // get route to read json file and return all saved notes as json 
-router.get('/notes', (req, res) =>
+router.get('/notes', (req, res) => {
+  console.log(`${req.method} request receieved`)
   readFromFile(path.join(__dirname,'../db/db.json')).then((data) => res.json(JSON.parse(data)))
-);
+});
 
 
 
