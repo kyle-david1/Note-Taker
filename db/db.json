@@ -4,10 +4,6 @@
         "text": "Test text"
     },
     {
-        "title": "m",
-        "text": "m"
-    },
-    {
         "title": "Groceries",
         "text": "Milk\nEggs\nCheese\n"
     },
@@ -20,11 +16,7 @@
         "text": "pizza,  ice cream"
     },
     {
-        "title": "Bob",
-        "text": "pizza,  ice cream"
-    },
-    {
-        "title": "kyle",
-        "text": "me, pizza, cheese"
+        "title": "To Do ",
+        "text": "Gym \nTan \nLaundry"
     }
 ]
