@@ -1,5 +1,5 @@
 const express = require('express');
-const { readAndAppend, readFromFile } = require('../develop/helpers/fsUtils');
+const { readAndAppend, readFromFile } = require('../Develop/helpers/fsUtils');
 const router = express.Router();
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
