@@ -2,7 +2,7 @@ const express = require('express');
 const { readAndAppend, readFromFile } = require('../develop/helpers/fsUtils');
 const router = express.Router();
 const path = require('path');
-
+const { v4: uuidv4 } = require('uuid');
 
 
 
@@ -20,10 +20,15 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
   // Destructuring assignment for the items in req.body
   const { title, text } = req.body;
-  const newNote = { title, text};
-  readAndAppend(newNote, path.join(__dirname, '../db/db.json'))
+  const newNote = { title, text, id: uuidv4()};
+  readAndAppend(newNote, path.join(__dirname, '../db/db.json')).then((data) => res.json('data returned'))
 
 });
+
+// delete route 
+// router.delete('notes/:id', (req, res) => {
+//   const newNote = req.body;
+// )};
 
 
 
